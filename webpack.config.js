@@ -14,9 +14,23 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 module.exports = {
     //入口 ===程序主模块
     entry: {
+        // 公共模块
+        commonCSS: './src/03-js/common.js',
+        dom: './src/03-js/dom.js',
+        http: './src/03-js/http.js',
+        utils: './src/03-js/utils.js',
+        // 三方插件模块
+        captcha: './src/lib/captcha/captcha-mini.js',
+        Swiper:'./src/lib/swiper/swiper-bundle.js',
+
+
+        // 私有模块
         login: './src/03-js/login.js',
         home: './src/03-js/home.js',
         register: './src/03-js/register.js',
+        publicity: './src/03-js/publicity.js',
+        course:'./src/03-js/course.js',
+        my:'./src/03-js/my.js',
     }, //相对路径
     //出口 ===最终生成的文件生成放的位置
     output: {
@@ -34,7 +48,7 @@ module.exports = {
                     options: {
                         publicPath: '../'
                     }
-                }, 'css-loader','postcss-loader']   //使用哪些三方包去处理匹配出来的这些文件 
+                }, 'css-loader', 'postcss-loader']   //使用哪些三方包去处理匹配出来的这些文件 
                 //css-loader:将css文件能够让webpack识别
                 //style-loader: 将js中的css代码提取到页面上 写到style标签里面
             },
@@ -45,7 +59,7 @@ module.exports = {
                     options: {
                         publicPath: '../'
                     }
-                }, 'css-loader','postcss-loader', 'less-loader']   //使用哪些三方包去处理匹配出来的这些文件 
+                }, 'css-loader', 'postcss-loader', 'less-loader']   //使用哪些三方包去处理匹配出来的这些文件 
                 //css-loader:将css文件能够让webpack识别
                 //style-loader: 将js中的css代码提取到页面上 写到style标签里面
             },
@@ -87,19 +101,31 @@ module.exports = {
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/login.html',
             filename: 'login.html',
-            chunks: ['login']
+            chunks: ['login', 'commonCSS', 'dom','http','utils']
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/home.html',
             filename: 'home.html',
-            chunks: ['home']
+            chunks: ['home', 'commonCSS', 'dom','Swiper','http']
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/register.html',
             filename: 'register.html',
-            chunks: ['register']
+            chunks: ['register', 'commonCSS', 'dom','captcha','http','utils']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/course.html',
+            filename: 'course.html',
+            chunks: ['course', 'commonCSS', 'dom']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/my.html',
+            filename: 'my.html',
+            chunks: ['my', 'commonCSS', 'dom']
             //以哪个html文件作为打包的模板
         }),
         new MiniCssExtractPlugin({
@@ -120,8 +146,9 @@ module.exports = {
         port: 8081,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'home.html', // 打开的页面
+        openPage: 'register.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 
 }
+ 

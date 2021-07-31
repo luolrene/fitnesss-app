@@ -1,0 +1,275 @@
+header{
+    width: 100%;
+    height: 200px;
+}
+// 主体
+main{
+    overflow-y: scroll;
+    // 目标
+    .target{
+        justify-content:space-around;
+        width: 100%;
+        height: 150px;
+        .ranking{
+            position: relative;
+            overflow: hidden;
+            width: 150px;
+            height: 150px;
+            background: #54AFD9 ;
+            border-radius: 15px;
+        }
+        .clock{
+            width: 212px;
+            height: 150px;
+            background: #9ED9F7;
+            border-radius: 15px;
+        }
+    }
+    // 数据
+    .data{
+        justify-content:space-around;
+        width: 100%;
+        height: 110px;
+      .data-exe{
+          width: 180px;
+          height: 110px;
+        //   background: #161616 ;
+          overflow: hidden;
+          border-radius: 15px;
+      }
+      .medal{
+        width: 185px;
+        height: 110px;
+        overflow: hidden;
+        background: #9DBDE3;
+        border-radius: 15px;
+      }
+    }
+    // 训练
+    .drillBox{
+        width: 100%;
+        height: 110px;
+        .drill{
+            margin: auto;
+            width: 385px;
+            height: 110px;
+            overflow: hidden;
+            background: #cc6d15;
+            border-radius: 15px;
+        }
+    }
+    // 跑步
+    .runBox{
+        margin-bottom: 20px;
+        width: 100%;
+        height: 110px;
+        .run{
+            margin: auto;
+            width: 385px;
+            height: 110px;
+            overflow: hidden;
+            background: #1417dd;
+            border-radius: 15px;
+        }
+    }
+}
+// 排名
+.ranking{
+    p{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #004E73;
+        z-index: 1;
+    }
+    .bg{
+        position: absolute;
+        top: 30px;
+        right: 44px;
+        width: 120px;
+        height: 120px;
+        opacity: 0.3;
+        background: url("../04-img/index-card-rank.png");
+        background-size: cover;
+        
+    }
+    h1{
+        position: absolute;
+        right: 15px;
+        bottom: 0;
+        font-size: 50px;
+        color: #fff;
+        z-index: 1;
+    }
+}
+// 打卡
+.clock{
+    position: relative;
+    p{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-weight: bold;
+        color: #004E73;
+        z-index: 1;
+    }
+    .bg{
+        position: absolute;
+        left: 10px;
+        bottom: 10px;
+        width: 110px;
+        height: 110px;
+        background: url("../04-img/index-card-sum.png");
+        background-size: cover;
+    }
+    .box{
+        position: absolute;
+        right: 15px;
+        bottom: 25px;
+        width: 100px;
+        height: 40px;
+        text-align: center;
+        line-height: 34px;
+        border-radius: 20px;
+        border: 3px solid #004E73;
+    }
+}
+// 运动数据
+.data-exe{
+    position: relative;
+   p{
+       position: absolute;
+       top: 12px;
+       left: 14px;
+       color: #fff;
+   }
+.bg{
+    width: 180px;
+    height: 110px;
+    background: url("../04-img/index-card-data.png");
+    background-size: cover;
+}
+}
+
+// 运动勋章
+.medal{
+    position: relative;
+    p{
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        font-weight: bold;
+        color: #004E73;
+        z-index: 1;
+    }
+    .bg{
+        position: absolute;
+        bottom: -10px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
+        background: url("../04-img/index-card-badge.png");
+        background-size: cover;
+        
+    }
+    h1{
+        position: absolute;
+        right: 33px;
+        bottom: 0;
+        font-size: 80px;
+        color: #004E73;
+        z-index: 1;
+    }
+    span{
+        position: absolute;
+        right: 14px;
+        bottom: 19px;
+        font-size: 18px;
+        color: #004E73;
+    }
+}
+// 训练
+.drill{
+   position: relative;
+   p{
+    position: absolute;
+    top: 13px;
+    left: 15px;
+    font-weight: bold;
+    color: #fff;
+   }
+   .bg{
+       width: 385px;
+       height: 110px;
+       background: url("../04-img/index-swiper-bg2.jpg");
+       background-size: cover;
+       background-position: 0 -17px ;
+   }
+}
+// 跑步
+.run{
+    position: relative;
+    p{
+        position: absolute;
+        top: 13px;
+        left: 15px;
+        font-weight: bold;
+        color: #fff;
+       }
+       .bg{
+           width: 385px;
+           height: 110px;
+           background: url("../04-img/course-img02.png");
+           background-size: cover;
+           background-position: 0 -73px ;
+       }
+}
+
+
+
+
+// 尾部
+footer{
+    justify-content: space-around;
+    width: 100%;
+    height: 77px;
+    box-shadow:0px -5px 10px  #ccc;
+
+    .iconBox{
+        width: 45px;
+        height: 77px;
+    }
+    i{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        color: #909090 ;
+    }
+    .iconfont{
+font-size: 44px;
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+    }
+}
+.on{
+        color: #9ED9F7;
+}
+
+// 轮播图
+.swiper-container {
+    width: 100%;
+    height: 200px;
+    --swiper-theme-color:#9ED9F7;
+    img{
+        width: 100%;
+        height: auto;
+    }
+}  
+.hide{
+    display: none;
+}

@@ -1,0 +1,74 @@
+/*
+ * 可复用的公有布局
+ */
+/* 登录注册页布局 */
+// 头部公用
+// 头部
+.title{
+    justify-content: space-around;
+    width: 96%;
+    height: 50px;
+    border-bottom: 2px solid #9A9A9A;
+    span{
+        text-align: center;
+        line-height: 55px;
+        color: #9A9A9A ;
+    }
+}
+.title .on{
+    font-size: 20px;
+    color: #4294FF;
+    border-bottom: 2px solid #4294FF;
+}
+
+
+// 尾部
+footer{
+    justify-content: space-around;
+    width: 100%;
+    height: 77px;
+    box-shadow:0px -5px 10px  #ccc;
+
+    .iconBox{
+        width: 45px;
+        height: 77px;
+    }
+    i{
+        margin: auto;
+        width: 100px;
+        height: 100px;
+        color: #909090 ;
+    }
+    .iconfont{
+font-size: 44px;
+    }
+    p{
+        text-align: center;
+        font-size: 14px;
+        color: #ccc;
+    }
+}
+footer .on{
+    color: #9ED9F7;
+}
+//确认提示框
+.toast{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+  width: 150px;
+  height: 150px;
+  background: rgb(170, 170, 170);
+  p{
+      width: 100%;
+      height: 75px;
+      text-align: center;
+      line-height: 75px;
+      span{
+        font-size: 40px;
+    }  
+  }
+}
+

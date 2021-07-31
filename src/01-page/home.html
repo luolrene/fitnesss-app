@@ -5,10 +5,93 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
 </head>
-<body>
-    <p>我是home</p>
-    <a href="./login.html">1</a>
-    <a href="./register.html">2</a>
+<body class="dpflex fldC">
+    <!-- 头部 -->
+    <header>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="../04-img/course-img01.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../04-img/course-img02.png" alt=""></div>
+                <div class="swiper-slide">
+                    <img src="../04-img/course-img03.jpg" alt="">
+                </div>
+                <div class="swiper-slide">
+                    <img src="../04-img/course-img04.jpg" alt="">
+                </div>
+
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+        </div>
+    </header>
+    <!-- 主体 -->
+    <main>
+        <!-- 目标 -->
+        <div class="target dpflex mt20">
+            <!-- 排名 -->
+            <div class="ranking">
+                <p>今日排名</p>
+                <div class="bg"></div>
+                <h1 id="rankDom"></h1>
+            </div>
+            <!-- 打卡 -->
+            <div class="clock">
+                <p>累积打卡
+                    <span id="punchIn">*</span>天
+                </p>
+                <div class="bg"></div>
+                <div class="box" id="cardBtn">今日打卡</div>
+            </div>
+        </div>
+        <!-- 数据 -->
+        <div class="data dpflex mt20">
+            <!-- 运动数据 -->
+            <div class="data-exe">
+                <p>运动数据</p>
+                <div class="bg"></div>
+            </div>
+            <!-- 运动勋章 -->
+            <div class="medal">
+                <p>累积运动徽章</p>
+                <div class="bg"></div>
+                <h1 id="signiaNum">*</h1>
+                <span>枚</span>
+            </div>
+        </div>
+        <!-- 训练 -->
+        <div class="drillBox mt20">
+            <div class="drill">
+                <p>课程训练</p>
+                <div class="bg"></div>
+            </div>
+        </div>
+        <!-- 跑步 -->
+        <div class="runBox mt20">
+            <div class="run">
+                <p>户外跑步</p>
+                <div class="bg"></div>
+            </div>
+        </div>
+    </main>
+    <!-- 尾部 -->
+    <footer class="dpflex">
+        <div class="iconBox">
+            <p><i class="iconfont icon-shouye1  on"></i></p>
+            <p class="on">首页</p>
+        </div>
+        <div class="iconBox">
+            <p> <i class="iconfont icon-shouye"></i></p>
+            <p>运动</p>
+        </div>
+        <div class="iconBox">
+            <p> <i class="iconfont icon-wode"></i></p>
+            <p>我的</p>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,61 @@
+
+/* 头部 */
+header{
+    width: 100%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    background: #f8f8f8;
+}
+/* 主体部分 */
+main{
+    position: relative;
+    flex: 1;
+    background:url("../04-img/advertisement-bg.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;  
+  
+}
+/* 右侧固定按钮 */
+main>.rightBox{
+    position: absolute;
+    top: 28px;
+    right: 14px;
+    padding: 7px;
+    width: 105px;
+    height: 40px;
+    text-align: center;
+    line-height: 26px;
+    background: #fff;
+    border-radius: 20px;
+    border: 1px solid rgba(187, 187, 187, 100);
+}
+main .time{
+   border-right: 1px solid rgb(182, 182, 182) ;
+}
+
+/* 动画字体 */
+main .font{
+    position: absolute;
+    bottom: 224px;
+    width: 100%;
+    text-align: center;
+    font-size: 42px;
+    font-weight: bolder;
+    color: #fff;
+    animation: run 1.5s forwards;
+}
+@keyframes run{
+    0% {
+        opacity: 0;
+        bottom: 224px;
+    }
+    50% {
+        opacity: 0.5;
+        bottom: 110px;
+    }
+    100% {
+        opacity: 1;
+        bottom: 124px;
+    }
+}

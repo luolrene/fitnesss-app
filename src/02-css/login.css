@@ -1,3 +1,77 @@
-p{
-    color: aquamarine;
+main{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../04-img/sign-bg.jpg") no-repeat;
+    background-size: cover;
+}
+.login{
+    position: absolute;
+    top: 30px;
+    right: 32px;
+    font-size: 20px;
+}
+.log{
+    position: absolute;
+    top: 82px;
+    left: 20px;
+    font-size: 40px;
+}
+.inps{
+    position: absolute;
+    top: 190px;
+    width: 100%;
+    text-align: center;
+}
+input{
+    margin-bottom: 20px;
+    width: 350px;
+    height: 50px;
+    background:rgba(250, 250, 250,.5) ;
+    border-radius: 25px;
+    border: none;
+}
+::-webkit-input-placeholder{
+    color: #fff;
+}
+.inpBox{
+    font-size: 16px;
+   text-indent: 30px;
+}
+.btn{
+    margin-bottom: 30px;
+    font-size: 16px;
+    background: rgba(96, 230, 125,.5);
+}
+
+.fPass{
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+.logs{  
+    position: absolute;
+    top: 410px;
+    left: 330px;
+    font-size: 16px;
+}
+.iconfont{
+    position: absolute;
+    top: 410px;
+    left: 310px;
+   width: 24px;
+   height: 24px; 
+   color: #fff;
+   font-size: 20px;
+}
+.bF{
+    position: absolute;
+    bottom: 60px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+.msg{
+    color: skyblue;
+    font-size: 20px;
 }
