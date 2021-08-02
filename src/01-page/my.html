@@ -9,21 +9,35 @@
 <body class="dpflex fldC">
     <!-- 头部 -->
     <header>
-        <div class="photo"></div>
+        <img src="../04-img/02.jpg"  class="photo">
         <div class="name f22">用户名</div>
-        <p class="f18">个性签名: 我的伶儿小宝贝,三天不打上房揭瓦</p>
+        <p class="f18 sign">个性签名: <span>三天不打上房揭瓦11111111111222222222111111</span></p>
         <i class="iconfont icon-vip9"></i>
     </header>
     <!-- 主体 -->
     <main class="flex1">
         <!-- 运动数据 -->
         <div class="run-data">
+            <!-- 运动数据头部 -->
             <div class="data-title">
                 <i class="iconfont icon-tongji"></i>
                 <span class="f18">运动数据</span>
                 <span>></span>
             </div>
+            <!-- 运动数据盒子 -->
+            <div class="data-box dpflex">
+                <div class="box-left box flex1 ml16">
+                    <p class="text">总运动</p>
+                    <p class="times text mt16"><span class="f40 c429 tiems">999</span>分钟</p>
+                </div>
+                <div class="box-right box flex1 mr16">
+                    <p class="text">本周消耗</p>
+                    <p class="times text mt16"><span class="f40 c429 calorie">999</span>千卡</p>
+                </div>
+            </div>
         </div>
+        <!-- 上传头像 -->
+        <input type="file" id="inpBox" >
         <!-- 运动徽章 -->
         <div class="run-badge"></div>
         <!-- 退出登录 -->
@@ -32,19 +46,6 @@
         </div>
     </main>
     <!-- 尾部 -->
-     <footer class="dpflex">
-        <div class="iconBox ">
-            <i class="iconfont icon-shouye1"></i>
-            <p >首页</p>
-        </div>
-        <div class="iconBox">
-            <i class="iconfont icon-shouye"></i>
-            <p >运动</p>
-        </div>
-        <div class="iconBox">
-            <i class="iconfont icon-wode on"></i>
-            <p class="on">我的</p>
-        </div>
-    </footer>
+    
 </body>
 </html>

@@ -22,6 +22,7 @@ module.exports = {
         // 三方插件模块
         captcha: './src/lib/captcha/captcha-mini.js',
         Swiper:'./src/lib/swiper/swiper-bundle.js',
+        weui:'./src/lib/weui/weui.js',
 
 
         // 私有模块
@@ -31,6 +32,7 @@ module.exports = {
         publicity: './src/03-js/publicity.js',
         course:'./src/03-js/course.js',
         my:'./src/03-js/my.js',
+        edit:'./src/03-js/edit.js',
     }, //相对路径
     //出口 ===最终生成的文件生成放的位置
     output: {
@@ -107,7 +109,7 @@ module.exports = {
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/home.html',
             filename: 'home.html',
-            chunks: ['home', 'commonCSS', 'dom','Swiper','http']
+            chunks: ['home', 'commonCSS', 'dom','Swiper','http','utils']
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
@@ -119,13 +121,19 @@ module.exports = {
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/course.html',
             filename: 'course.html',
-            chunks: ['course', 'commonCSS', 'dom']
+            chunks: ['course', 'commonCSS', 'dom','utils']
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/my.html',
             filename: 'my.html',
-            chunks: ['my', 'commonCSS', 'dom']
+            chunks: ['my', 'commonCSS', 'dom','utils','http']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/edit.html',
+            filename: 'edit.html',
+            chunks: ['edit', 'commonCSS', 'dom','http','weui']
             //以哪个html文件作为打包的模板
         }),
         new MiniCssExtractPlugin({
@@ -146,7 +154,7 @@ module.exports = {
         port: 8081,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'register.html', // 打开的页面
+        openPage: 'edit.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 

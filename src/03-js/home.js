@@ -11,6 +11,7 @@ var mySwiper = new Swiper('.swiper-container', {
     },
 })
 document.ready(function () {
+    utils.createFooter("home")
     let rankDom = document.querySelector("#rankDom")
     let signiaNum = document.querySelector("#signiaNum")
     let punchIn = document.querySelector("#punchIn")
