@@ -7,6 +7,8 @@ document.ready(function () {
     let times = document.querySelector(".times span")
     let calorie = document.querySelector(".calorie")
     let inpBox = document.querySelector("#inpBox")
+    let offBtn=document.querySelector(".off")
+    let header=document.querySelector("header")
     const BASE_URL = 'http://139.9.177.51:8099'
 
 
@@ -44,7 +46,19 @@ document.ready(function () {
 
     })
     // 点击图片换头像，inp框也点击到
-    photo.addEventListener("click", function () {
-        inpBox.click()
+    photo.addEventListener("click", function (e) {
+        inpBox.click();
+        // 阻止事件冒泡
+        e.stopPropagation();
+    })
+    // 点击头部跳转修改个人信息
+    header.addEventListener("click",function(e){
+        location.href="./edit.html"
+    })
+
+    // 退出登录交互效果
+    offBtn.addEventListener("click",function(e){
+        location.href="./login.html"
+        localStorage.removeItem("user")
     })
 })

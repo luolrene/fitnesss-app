@@ -33,6 +33,9 @@ module.exports = {
         course:'./src/03-js/course.js',
         my:'./src/03-js/my.js',
         edit:'./src/03-js/edit.js',
+        description:'./src/03-js/description.js',
+        play:'./src/03-js/play.js',
+        data:'./src/03-js/data.js'
     }, //相对路径
     //出口 ===最终生成的文件生成放的位置
     output: {
@@ -101,6 +104,12 @@ module.exports = {
         //     配置  key:value
         // })
         new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/publicity.html',
+            filename: 'publicity.html',
+            chunks: ['publicity', 'commonCSS', 'dom']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/login.html',
             filename: 'login.html',
             chunks: ['login', 'commonCSS', 'dom','http','utils']
@@ -121,7 +130,7 @@ module.exports = {
         new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/course.html',
             filename: 'course.html',
-            chunks: ['course', 'commonCSS', 'dom','utils']
+            chunks: ['course', 'commonCSS', 'dom','utils','http']
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
@@ -131,9 +140,27 @@ module.exports = {
             //以哪个html文件作为打包的模板
         }),
         new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/description.html',
+            filename: 'description.html',
+            chunks: ['description', 'commonCSS', 'dom','http','utils']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/play.html',
+            filename: 'play.html',
+            chunks: ['play', 'dom','commonCSS']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
             template: './src/01-page/edit.html',
             filename: 'edit.html',
-            chunks: ['edit', 'commonCSS', 'dom','http','weui']
+            chunks: ['edit', 'commonCSS', 'dom','http','weui','utils']
+            //以哪个html文件作为打包的模板
+        }),
+        new HtmlWebpackPlugin({   //配置html打包的插件
+            template: './src/01-page/data.html',
+            filename: 'data.html',
+            chunks: ['data', 'commonCSS', 'dom']
             //以哪个html文件作为打包的模板
         }),
         new MiniCssExtractPlugin({
@@ -154,7 +181,7 @@ module.exports = {
         port: 8081,  // 端口  8080 80  8081 8082
         open: true, // 自动打开服务
         publicPath: '/', // 静态资源查找路径
-        openPage: 'edit.html', // 打开的页面
+        openPage: 'publicity.html', // 打开的页面
     },
     target: 'web', // 目标是浏览器
 

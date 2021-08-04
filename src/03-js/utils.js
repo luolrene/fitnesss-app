@@ -53,6 +53,23 @@ document.ready(function () {
         footer.innerHTML = html
         document.querySelector("body").appendChild(footer)
     }
+
+    utils. strToObj= function (str) {
+        let obj = {};
+        str = str.substr(1);
+        //id=6&name=zangmazi
+        let arr = str.split('&');
+        //['id=6','name=zhangmazi']
+    
+        arr.forEach(function (item, index) {
+          let arr1 = item.split('=');
+          //[id,6]  [name,zhangmazi]
+          obj[arr1[0]] = arr1[1];
+        })
+        return obj;
+      }
+
+    
     // 挂载到window上
     window.utils = utils
 

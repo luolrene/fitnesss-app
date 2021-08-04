@@ -11,7 +11,7 @@ header{
 main{
     position: relative;
     flex: 1;
-    background:url("../04-img/advertisement-bg.jpg") no-repeat;
+    background:url("../04-img/1.gif") no-repeat;
     background-size: cover;
     background-position: center;  
   
@@ -43,19 +43,25 @@ main .font{
     font-size: 42px;
     font-weight: bolder;
     color: #fff;
-    animation: run 1.5s forwards;
+    animation: run 2s forwards;
 }
+
 @keyframes run{
     0% {
         opacity: 0;
         bottom: 224px;
+        font-size: 10px;
+
     }
     50% {
         opacity: 0.5;
         bottom: 110px;
+        font-size: 32px;
+   
     }
     100% {
         opacity: 1;
         bottom: 124px;
+        font-size: 42px;
     }
 }

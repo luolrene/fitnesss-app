@@ -7,7 +7,6 @@ document.ready(function () {
     let inText = document.querySelector(".inText")
     let inPsd = document.querySelector(".inPsd")
     let btn = document.querySelector(".btn")
-    let msg = document.querySelector(".msg")
     let login = document.querySelector(".login")
 
 
@@ -25,14 +24,14 @@ document.ready(function () {
                     localStorage.setItem("user", JSON.stringify(res.data.user))
                     // 跳转页面
                     console.log(utils);
-                    utils.createToast(0,"登录成功");
+                    utils.createToast(0, "登录成功");
                     //  跳转到首页页面
                     setTimeout(function () {
                         location.href = './home.html';
-                    }, 3000)
+                    }, 2000)
                 } else {
                     // 如果res.status===1 注册失败
-                    utils.createToast(1,res.msg);
+                    utils.createToast(1, res.msg);
                 }
             })
         }
