@@ -9,7 +9,7 @@ document.ready(function () {
     // 指定图表的配置项和数据
     var columnarOption = {
         title: {
-            text: '近7天运动时长'
+            text: '近7天运动时长1'
         },
         tooltip: {},
         legend: {
