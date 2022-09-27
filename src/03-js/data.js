@@ -27,7 +27,7 @@ document.ready(function () {
     };
     // 使用刚指定的配置项和数据显示图表。
     columnarChart.setOption(columnarOption);
-
+console.log(222);
 
     // 饼状图
     var pieChart = echarts.init(document.getElementById('content'));
